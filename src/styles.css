@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *, .dark, .dark *));
+
+:root {
+  --app-bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+}
+
+[data-theme="dark"], .dark {
+  --app-bg: #070d18;
+  --card-bg: #0f172a;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: #1e293b;
+  color-scheme: dark;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: #1e293b;
+  background-color: #f8fafc;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+code, pre {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Comprehensive Dark Mode Rules - overrides across the entire UI */
+[data-theme="dark"], [data-theme="dark"] body, .dark, .dark body {
+  background-color: #070d18 !important;
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .bg-white, .dark .bg-white {
+  background-color: #0d1527 !important;
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .bg-\[\#F8FAFC\], .dark .bg-\[\#F8FAFC\],
+[data-theme="dark"] .bg-slate-50, .dark .bg-slate-50 {
+  background-color: #070d18 !important;
+}
+
+[data-theme="dark"] .bg-white\/80, .dark .bg-white\/80,
+[data-theme="dark"] .bg-white\/95, .dark .bg-white\/95 {
+  background-color: rgba(13, 21, 39, 0.95) !important;
+}
+
+[data-theme="dark"] .bg-slate-100, .dark .bg-slate-100,
+[data-theme="dark"] .bg-\[\#EEF2F6\], .dark .bg-\[\#EEF2F6\] {
+  background-color: #162238 !important;
+}
+
+[data-theme="dark"] .bg-\[\#F0F6FF\], .dark .bg-\[\#F0F6FF\],
+[data-theme="dark"] .bg-\[\#F0F7FF\], .dark .bg-\[\#F0F7FF\],
+[data-theme="dark"] .bg-blue-50, .dark .bg-blue-50,
+[data-theme="dark"] .bg-blue-50\/40, .dark .bg-blue-50\/40 {
+  background-color: #0e203c !important;
+}
+
+[data-theme="dark"] .bg-purple-100, .dark .bg-purple-100 {
+  background-color: #2e1065 !important;
+}
+
+[data-theme="dark"] .text-purple-700, .dark .text-purple-700 {
+  color: #c084fc !important;
+}
+
+[data-theme="dark"] .border-slate-200, .dark .border-slate-200,
+[data-theme="dark"] .border-slate-300, .dark .border-slate-300,
+[data-theme="dark"] .border-slate-100, .dark .border-slate-100,
+[data-theme="dark"] .border-slate-200\/80, .dark .border-slate-200\/80,
+[data-theme="dark"] .border-slate-200\/90, .dark .border-slate-200\/90,
+[data-theme="dark"] .border-slate-300\/80, .dark .border-slate-300\/80,
+[data-theme="dark"] .border-blue-200\/90, .dark .border-blue-200\/90,
+[data-theme="dark"] .border-blue-200, .dark .border-blue-200,
+[data-theme="dark"] .border-blue-200\/60, .dark .border-blue-200\/60 {
+  border-color: #1e293b !important;
+}
+
+[data-theme="dark"] .text-slate-900, .dark .text-slate-900,
+[data-theme="dark"] .text-slate-800, .dark .text-slate-800,
+[data-theme="dark"] .text-\[\#0B132B\], .dark .text-\[\#0B132B\],
+[data-theme="dark"] .text-\[\#0F172A\], .dark .text-\[\#0F172A\] {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .text-slate-700, .dark .text-slate-700 {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .text-slate-600, .dark .text-slate-600,
+[data-theme="dark"] .text-slate-500, .dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] select, .dark select,
+[data-theme="dark"] input, .dark input,
+[data-theme="dark"] textarea, .dark textarea {
+  background-color: #0b1325 !important;
+  color: #f8fafc !important;
+  border-color: #1e293b !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb,
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}

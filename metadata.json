@@ -1,0 +1,6 @@
+{
+  "name": "CoreAudit",
+  "description": "Enterprise-grade code security scanner and strategic business evaluator powered by Meta AI models.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_META_AI_API", "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
