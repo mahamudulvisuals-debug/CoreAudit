@@ -38,6 +38,6 @@ The server exposes `/api/health` for configuration status and `/api/llm/test` fo
 
 ## Deployment notes
 
-Deploy the project to a Node.js-capable host. Configure `META_API_KEY` in the host's server-side environment settings. Do not add the secret to GitHub or any `VITE_` variable, because Vite variables can be exposed to browser code.
+Deploy the project to a Node.js-capable host. Configure `MODEL_API_KEY` in the host's server-side environment settings. Do not add the secret to GitHub or any `VITE_` variable, because Vite variables can be exposed to browser code.
 
 The JSON files in `data/` are local file-based storage and may not persist on ephemeral/serverless hosting. Use persistent storage before relying on account or history data in production.
